@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # 关键：用 GitHub 自动 token
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,5 +34,4 @@ jobs:
           git commit -m 'Update Tonight Brief' || echo "Nothing to commit"
           git push
         env:
-          # 使用 GitHub 自动提供的 token，默认有权限 push
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
