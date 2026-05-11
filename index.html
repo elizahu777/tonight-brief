@@ -3,69 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tonight Brief for Eliza</title>
+
+<title>Tonight Brief</title>
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f5f3ee;
-    color: #111111;
-    line-height: 1.6;
-  }
-  .dark-mode { background-color: #0f1113; color: #f3f3f3; }
-  header { padding: 2rem 1rem; text-align: center; }
-  .title { font-weight: 700; font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 0.5rem; }
-  .subtitle { font-weight: 500; font-size: 1.25rem; color: #6b6b6b; margin-bottom: 1rem; }
-  .date-edition { font-weight: 500; font-size: 1rem; color: #6b6b6b; margin-bottom: 2rem; }
-  .cards { display: flex; flex-direction: column; gap: 1rem; padding: 0 1rem 2rem 1rem; max-width: 600px; margin: 0 auto; }
-  .card { background: rgba(255,255,255,0.72); backdrop-filter: blur(8px); border-radius: 12px; padding: 1rem 1.5rem; }
-  .card .tags { font-size: 0.75rem; letter-spacing: 1px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 0.5rem; }
-  .card .headline { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; }
-  .card .summary { font-size: 0.95rem; margin-bottom: 0.5rem; }
-  .card .source { font-size: 0.8rem; color: #6b6b6b; }
-  .archive { padding: 2rem 1rem; max-width: 600px; margin: 0 auto; }
-  .archive h2 { font-weight: 600; margin-bottom: 1rem; }
-  .archive a { display: block; margin-bottom: 0.25rem; color: #111111; text-decoration: none; }
-  .archive a:hover { text-decoration: underline; }
-  @media (prefers-color-scheme: dark) {
-    body { background-color: #0f1113; color: #f3f3f3; }
-    .card { background: rgba(255,255,255,0.04); }
-    .archive a { color: #f3f3f3; }
-  }
+body{
+margin:0;
+padding:0;
+background:#f5f3ee;
+color:#111;
+font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+line-height:1.7;
+}
+
+.container{
+max-width:680px;
+margin:auto;
+padding:56px 20px 80px;
+}
+
+.title{
+font-size:52px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.subtitle{
+margin-top:8px;
+font-size:24px;
+color:#666;
+}
+
+.meta{
+margin-top:28px;
+font-size:15px;
+line-height:1.8;
+color:#666;
+}
+
+.card{
+background:white;
+border-radius:22px;
+padding:24px;
+margin-top:24px;
+box-shadow:0 1px 4px rgba(0,0,0,0.03);
+}
+
+.tag{
+font-size:12px;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#8a8a8a;
+margin-bottom:12px;
+}
+
+.headline{
+font-size:28px;
+font-weight:700;
+line-height:1.4;
+margin-bottom:14px;
+}
+
+.summary{
+font-size:17px;
+color:#333;
+}
+
+.source{
+margin-top:18px;
+font-size:14px;
+color:#777;
+}
+
+.source a{
+color:#777;
+text-decoration:none;
+}
+
+.archive{
+margin-top:56px;
+padding-top:24px;
+border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.archive-title{
+font-size:15px;
+font-weight:600;
+margin-bottom:16px;
+}
+
+.archive a{
+display:block;
+margin-bottom:10px;
+color:#666;
+text-decoration:none;
+}
+
+.footer{
+margin-top:64px;
+font-size:13px;
+color:#888;
+line-height:1.8;
+}
 </style>
 </head>
+
 <body>
-<header>
-  <div class="title">TONIGHT BRIEF</div>
-  <div class="subtitle">for Eliza</div>
-  <div class="date-edition">May 12, 2026<br>Edition 018</div>
-</header>
-<main class="cards">
-  <div class="card">
-    <div class="tags">CHINA ECONOMY / GLOBAL TRADE</div>
-    <div class="headline">中国4月出口恢复性增长</div>
-    <div class="summary">补库存周期与AI相关制造需求推高东亚航运与电子链订单。部分外贸企业重新评估下半年产能安排。</div>
-    <div class="source">Reuters · 2026.05.12 · <a href=" ">Read Source →</a ></div>
-  </div>
-  <div class="card">
-    <div class="tags">MACRO / SUPPLY CHAIN</div>
-    <div class="headline">全球航运运价小幅回升</div>
-    <div class="summary">亚洲主要港口物流恢复，全球集装箱运费指数出现阶段性回升。</div>
-    <div class="source">Bloomberg · 2026.05.12 · <a href="#">Read Source →</a ></div>
-  </div>
-  <div class="card">
-    <div class="tags">LABOR / SOCIAL SHIFT</div>
-    <div class="headline">年轻人就业结构变化显现</div>
-    <div class="summary">互联网及服务业招聘放缓，制造业及低成本产业吸纳更多年轻劳动力。</div>
-    <div class="source">Caixin · 2026.05.12 · <a href="#">Read Source →</a ></div>
-  </div>
-</main>
-<section class="archive">
-  <h2>Archive</h2>
-  <a href="#">Edition 017 · May 11, 2026</a >
-  <a href="#">Edition 016 · May 10, 2026</a >
-  <a href="#">Edition 015 · May 09, 2026</a >
-</section>
+
+<div class="container">
+
+<div class="title">TONIGHT BRIEF</div>
+
+<div class="subtitle">for Eliza</div>
+
+<div class="meta">
+May 12, 2026<br>
+Edition 018
+</div>
+
+<div class="card">
+
+<div class="tag">
+CHINA ECONOMY / GLOBAL TRADE
+</div>
+
+<div class="headline">
+中国4月出口出现恢复性增长
+</div>
+
+<div class="summary">
+补库存周期与AI相关制造需求共同推高东亚航运与电子链订单。部分外贸企业开始重新评估下半年产能安排。
+</div>
+
+<div class="source">
+Reuters · 2026.05.12 ·
+<a href=" ">Read Source →</a >
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="tag">
+SOCIAL SHIFT / LABOR
+</div>
+
+<div class="headline">
+年轻人就业结构继续变化
+</div>
+
+<div class="summary">
+服务业招聘增长放缓，制造业与低成本产业开始吸纳更多年轻劳动力，就业偏好正在重新调整。
+</div>
+
+<div class="source">
+Caixin · 2026.05.12 ·
+<a href="#">Read Source →</a >
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="tag">
+MACRO / SUPPLY CHAIN
+</div>
+
+<div class="headline">
+全球航运运价出现阶段性回升
+</div>
+
+<div class="summary">
+亚洲主要港口物流恢复后，部分国际航线运费指数开始回暖，供应链压力有所缓解。
+</div>
+
+<div class="source">
+Bloomberg · 2026.05.12 ·
+<a href="#">Read Source →</a >
+</div>
+
+</div>
+
+<div class="archive">
+
+<div class="archive-title">
+Archive
+</div>
+
+<a href="#">
+Edition 017 · May 11, 2026
+</a >
+
+<a href="#">
+Edition 016 · May 10, 2026
+</a >
+
+<a href="#">
+Edition 015 · May 09, 2026
+</a >
+
+</div>
+
+<div class="footer">
+Tonight Brief for Eliza<br>
+A low-noise nightly edition of the real world.
+</div>
+
+</div>
+
 </body>
 </html>
