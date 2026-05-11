@@ -2,7 +2,7 @@ name: Update Tonight Brief
 
 on:
   schedule:
-    - cron: '0 14 * * *'  # 每天 UTC 14:00
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # 关键：用 GitHub 自动 token
+          token: ${{ secrets.GITHUB_TOKEN }}   # 关键
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,5 +33,3 @@ jobs:
           git add index.html
           git commit -m 'Update Tonight Brief' || echo "Nothing to commit"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
