@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # ✅ 关键
+          token: ${{ secrets.GITHUB_TOKEN }}   # ⚠️ 必须有
 
       - name: Set up Python
         uses: actions/setup-python@v5
